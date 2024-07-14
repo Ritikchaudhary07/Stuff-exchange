@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="chatbox.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <title> chat box </title>
+</head>
+
+<body background="image\banner-bg.jpg">
+    <!--------- header section start ------------>
+    <header class="header">
+    
+        <div class="header-1">
+    
+            <a href="" class="logo"><i class="fas fa-book"> STU FF EXCHANGE</i></a>
+    
+            <form action="" class="search-form">
+                <input type="search" name="" placeholder="Find books, stationary...." id="search-box">
+                <label for="search-box" class="fas fa-search"></label>
+            </form>
+    
+            <div class="icons">
+                <div id="search-btn" class="fas fa-search"></div>
+                <a href="" class="fas fa-heart"></a>
+                <a href="" class="fas fa-shopping-cart"></a>
+                <div id="login-btn" class="fas fa-user"></div>
+            </div>
+    
+        </div>
+    
+        <div class="header-2">
+    
+            <div class="navbar">
+                <a href="#home">home</a>
+                <a href="#featured">featured</a>
+                <a href="#categories">categories</a>
+                <label for="categories"></label>
+                <select name="books" id="books">
+                    <optgroup label="Books">
+                        <option value="Books">Books</option>
+                        <option value="Books">Class 12th</option>
+                        <option value="Books">Class 10th</option>
+                        <option value="Books">Class 9th</option>
+                        <option value="Books">Class 8th</option>
+                        <option value="Books">Class 7th</option>
+                        <option value="Books">Class 6th</option>
+                    </optgroup>
+                    <optgroup label="Clothes">
+                        <option value="House">House T-shirt</option>
+                        <option value="Stationary">Stationary</option>
+                    </optgroup>
+                </select>
+                <a href="#arrivals">arrivals</a>
+                <a href="#reviews">reviews</a>
+                <a href="#blogs">blogs</a>
+    
+            </div>
+    
+        </div>
+    
+    </header>
+    
+    <!--------- header section ends ------------>
+    
+    <!--------- bottom navbar  ------------>
+    
+    <div class="bottom-navbar">
+        <a href="#home" class="fas fa-home"></a>
+        <a href="#featured" class="fas fa-list"></a>
+        <a href="#arrivals" class="fas fa-tags"></a>
+        <a href="#reviews" class="fas fa-comments"></a>
+        <a href="#blogs" class="fas fa-app-store"></a>
+    </div>
+    
+    
+    <!-------- bottom navbar start ----------->
+    
+    <div class="bottom-navbar">
+        <a href="#home" class="fas fa-home"></a>
+        <a href="#featured" class="fas fa-list"></a>
+        <a href="#arrivals" class="fas fa-tags"></a>
+        <a href="#reviews" class="fas fa-comments"></a>
+        <a href="#blogs" class="fas fa-app-store"></a>
+    </div>
+
+    <!--==================== *  chat box* =============================  -->
+
+
+    <div class="chat_box">
+
+        <div class="heading_chatbox">
+            <div class="img_name_chat">
+                <img src="image/pic-3.png">
+                <h2> Ram </h2>
+            </div>
+            <i class="fa-solid fa-x"></i>
+        </div>
+
+        <div class="see_chat">
+            <h3 id="message"> </h3>
+        </div>
+
+        <div class="send_message">
+            <input type="text" placeholder="Type a message" id="text_message">
+            <input type="text" placeholder="Type a message" id="demo">
+            <i class="fa-solid fa-paper-plane" id="sand_icon"></i>
+        </div>
+
+
+    </div>
+
+
+
+    <script>
+        // ==================== *  Navbar * ============================= 
+
+        let contry = document.getElementById('contry');
+        let moving = document.getElementById('moving');
+        let text = document.getElementById('text');
+        let list = document.getElementById('list');
+
+        contry.addEventListener('click', () => {
+            list.classList.toggle('hidden');
+            moving.classList.toggle('roted');
+        });
+        function Myfunction(omkar) {
+            text.innerHTML = omkar;
+        }
+
+
+
+        let eng_tag = document.getElementById('eng_tag');
+        let hin_eng = document.querySelector('.hin_eng');
+        let language = document.querySelector('.language');
+
+
+        language.addEventListener('click', () => {
+            hin_eng.classList.toggle('display_div');
+        });
+        function languageolx(anyone) {
+            eng_tag.innerHTML = anyone;
+        }
+
+
+
+        let girl_img_id = document.getElementById('girl_img_id');
+        let dropdownid = document.getElementById('dropdownid');
+
+        girl_img_id.addEventListener('click', () => {
+            dropdownid.classList.toggle('blobkdis');
+        });
+
+
+
+        // ==================== *  chat box * ============================= 
+
+        let sand_icon = document.getElementById('sand_icon');
+        let message = document.getElementById('message');
+        let text_message = document.getElementById('text_message');
+        let demo = document.getElementById('demo');
+
+
+        sand_icon.addEventListener('click', () => {
+            message.innerHTML = text_message.value;
+            message.style = 'display: block';
+            text_message.value = demo.value
+        })
+
+
+    </script>
+
+</body>
+
+</html>
